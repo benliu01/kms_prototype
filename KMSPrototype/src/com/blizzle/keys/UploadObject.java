@@ -16,10 +16,10 @@ public class UploadObject {
 	public static void main(String[] args) throws Exception {
 		String accessKey = System.getenv("AWS_ACCESS_KEY");
 		String secretKey = System.getenv("AWS_SECRET_KEY");
+		String kms_cmk_id = System.getenv("KEY_ID");
 		
 		String bucketName = "ben-key-prototype"; 
 		String objectKey  = "ExampleKMSEncryptedObject";
-		String kms_cmk_id = "69f90dc8-ad73-43d1-825a-ed7a8ec5c486";
 
 		KMSEncryptionMaterialsProvider materialProvider = new KMSEncryptionMaterialsProvider(kms_cmk_id);
 
